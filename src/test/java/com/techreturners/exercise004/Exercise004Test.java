@@ -12,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class Exercise004Test {
 
     @Test
+    @Ignore
     public void checkGetDateTimeWhenDateIsSpecified() {
 
         Exercise004 ex004 = new Exercise004(LocalDate.of(2021, Month.JULY, 19));

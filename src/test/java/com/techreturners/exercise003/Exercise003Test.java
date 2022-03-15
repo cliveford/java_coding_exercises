@@ -16,6 +16,7 @@ public class Exercise003Test {
     }
 
     @Test
+    @Ignore
     public void checkGetIceCreamCodeForMintChocolateChip() {
         String iceCreamFlavour = "Mint Chocolate Chip";
         int expected = 3;
