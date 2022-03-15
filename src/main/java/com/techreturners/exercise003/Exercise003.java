@@ -1,13 +1,20 @@
 package com.techreturners.exercise003;
 
-public class Exercise003 {
+import java.util.Objects;
 
+public class Exercise003 {
+    String[] iceCreams = { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
     int getIceCreamCode(String iceCreamFlavour) {
-        throw new UnsupportedOperationException(("You can delete this statement and add your code here."));
+        for (int i = 0; i < iceCreams.length; i++) {
+            if (Objects.equals(iceCreamFlavour, iceCreams[i])) {
+                return i;
+            }
+        }
+        throw new UnsupportedOperationException(("Sorry " + iceCreamFlavour + " isn't available"));
     }
 
     String[] iceCreamFlavours() {
-        throw new UnsupportedOperationException(("You can delete this statement and add your code here."));
+        return iceCreams;
     }
 
 }
