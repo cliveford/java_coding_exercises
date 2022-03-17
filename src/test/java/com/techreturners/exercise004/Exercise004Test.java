@@ -10,9 +10,7 @@ import java.time.Month;
 import static org.junit.Assert.assertEquals;
 
 public class Exercise004Test {
-
     @Test
-    @Ignore
     public void checkGetDateTimeWhenDateIsSpecified() {
 
         Exercise004 ex004 = new Exercise004(LocalDate.of(2021, Month.JULY, 19));
@@ -21,7 +19,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecified() {
 
@@ -31,7 +28,25 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
+    @Test
+    public void checkGetDateTimeWhenBothDateAndTimeIsSpecifiedAndYearIsThreeDigits() {
+
+        Exercise004 ex004 = new Exercise004(LocalDateTime.of(999, Month.APRIL, 24, 12, 12, 0, 0));
+        LocalDateTime expected = LocalDateTime.of(1031, Month.JANUARY, 01, 13, 58, 40);
+
+        assertEquals(expected, ex004.getDateTime());
+    }
+
+    @Test
+    public void checkGetDateTimeWhenBothDateAndTimeIsNow() {
+
+        Exercise004 ex004 = new Exercise004(LocalDateTime.now().withNano(0));
+        LocalDateTime expected = LocalDateTime.now().withNano(0).plusSeconds(1000000000);
+
+        assertEquals(expected, ex004.getDateTime());
+    }
+
+
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecifiedWithDayRollOver() {
 
