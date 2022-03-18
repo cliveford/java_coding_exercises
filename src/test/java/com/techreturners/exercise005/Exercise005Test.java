@@ -76,4 +76,9 @@ public class Exercise005Test {
         assertTrue(ex005.isPangram("the 1 quick brown } {fox . ,jumps over [] the 2 lazy dogs"));
     }
 
+    @Test
+    public void checkSentenceWithExtraLetterXsIsAPangram() {
+        assertTrue(ex005.isPangram("the quick brown foxxxxx jumps over the lazy dog"));
+    }
+
 }
