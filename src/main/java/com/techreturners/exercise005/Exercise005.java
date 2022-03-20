@@ -7,19 +7,15 @@ public class Exercise005 {
         String compare = "abcdefghijklmnopqrstuvwxyz";
         String inputLowerCase = input.toLowerCase();
         int counter = 0;
-        for (int i = 0; i < compare.length(); i++) {
-            for (int j = 0; j < input.length() ; j++) {
-                if (compare.charAt(i) == inputLowerCase.charAt(j)) {
-                    counter += 1;
+        for (int compareIndex = 0; compareIndex < compare.length(); compareIndex++) {
+            for (int inputIndex = 0; inputIndex < input.length() ; inputIndex++) {
+                if (compare.charAt(compareIndex) == inputLowerCase.charAt(inputIndex)) {
+                    counter++;
                     break;
                 }
             }
         }
-        if (counter == 26) {
-            return true;
-        } else {
-            return false;
-        }
+        return counter == 26;
     }
 
 }

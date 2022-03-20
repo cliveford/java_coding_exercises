@@ -20,12 +20,10 @@ class Person{
 public class Exercise002 {
 
     public boolean isFromManchester(Person person) {
-        // Add your code here
         return Objects.equals(person.town, "Manchester");
     }
 
     public boolean canWatchFilm(Person person, int ageLimit) {
-        // Add your code here
         return person.age >= ageLimit;
     }
     

@@ -1,22 +1,23 @@
 package com.techreturners.exercise004;
 
-import javax.swing.text.DateFormatter;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+
 
 public class Exercise004 {
 
+    final int SECONDSTOADD = 1_000_000_000;
     LocalDateTime plusSeconds;
     public Exercise004(LocalDate date) {
-        LocalTime localTime = LocalTime.of(00, 00, 00, 00);
+        LocalTime localTime = LocalTime.of(0, 0, 0, 0);
         LocalDateTime localDateTime = LocalDateTime.of(date, localTime);
-        plusSeconds = localDateTime.plusSeconds(1000000000);
+        plusSeconds = localDateTime.plusSeconds(SECONDSTOADD);
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        plusSeconds = dateTime.plusSeconds(1000000000);
+        plusSeconds = dateTime.plusSeconds(SECONDSTOADD);
     }
 
     public LocalDateTime getDateTime() {
